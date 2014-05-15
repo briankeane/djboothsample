@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <% unless notice.blank? %>
+        <div class="alert alert-success"><%= notice %></div>
+      <% end %>
+      <% unless alert.blank? %>
+        <div class="alert alert-danger"><%= alert %></div>
+      <% end %>
+    </div>
+  </div>
+</div>

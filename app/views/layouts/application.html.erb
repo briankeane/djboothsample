@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playolatester</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= csrf_meta_tags %>
+  <style type="text/css">
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid red;
+  }
+  </style>
+</head>
+<body class="<%= params[:controller] %> <%= params[:action] %>">
+  <%= render 'shared/header' %>
+  <%= render 'shared/notices' %>
+  <%= yield %>
+
+  <%= javascript_include_tag "application" %>
+</body>
+</html>
